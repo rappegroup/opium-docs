@@ -1,0 +1,13 @@
+# Editor files
+*~
+
+# Python compiled
+__pycache__/
+*.py[cod]
+
+# Python build
+docs/build/
+
+# Python virtual env
+.env
+.venv
