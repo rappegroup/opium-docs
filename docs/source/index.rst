@@ -6,7 +6,7 @@
 Opium pseudopotential generation project
 ========================================
 
-OPIUM [#]_ is a program used to generate pseudopotentials for use in
+OPIUM[#]_ is a program used to generate pseudopotentials for use in
 first-principles calculations.
 
 
