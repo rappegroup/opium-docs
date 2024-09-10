@@ -39,8 +39,8 @@ OPIUM also supports the following output formats:
 .. [#] Gonze, Xavier, Peter Käckell, and Matthias Scheffler. "Ghost states for separable, norm-conserving, ab initio pseudopotentials." *Physical Review B* 41.17 (1990): 12264.
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 3
+   :caption: Contents
 
    introduction
    usage
