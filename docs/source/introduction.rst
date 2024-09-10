@@ -25,8 +25,8 @@ OPIUM can now be called from the command line using:
 
    $ ./opium input.param output.txt command1 command2 ...
 
-To use graphical features of Opium, the plotting program ``Grace`` must also be installed. 
-``Grace`` can be downloaded from `its homepage <https://plasma-gate.weizmann.ac.il/Grace/>`_. 
+To use graphical features of Opium, the plotting program Grace must also be installed. 
+Grace can be downloaded from `its homepage <https://plasma-gate.weizmann.ac.il/Grace/>`_. 
 
 .. note::
    OPIUM is tested using `Intel <https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html>`_ 
@@ -40,20 +40,19 @@ If the above does not work, you can also try:
 * Using a different C or FORTRAN compiler
 
 
-Tutorial
+Starting Steps
 ------------
 
 
 
-Examples
+Example Codes
 ------------
 
-
-1: Hydrogen
+Hydrogen
 ~~~~~~~~~~
 
-2: Carbon
+Carbon
 ~~~~~~~~~~
 
-3: Aluminum
+Aluminum
 ~~~~~~~~~~
