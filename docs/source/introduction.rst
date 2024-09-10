@@ -36,12 +36,24 @@ If the above does not work, you can also try:
 * Using a different C or FORTRAN compiler
 
 
-Quick Start
+Help
 ========================================
+For help, you can type into the console:
+
+.. code-block:: console
+
+   $ ./opium help
+
+And for more specific information on command line, plotting, and keyblock help respectively:
+
+.. code-block:: console
+
+   $ ./opium -c
+   $ ./opium -p
+   $ ./opium -k
 
 
-
-Example Codes
+Tutorial
 ========================================
 
 
