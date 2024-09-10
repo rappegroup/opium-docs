@@ -41,7 +41,10 @@ OPIUM also supports the following output formats:
 .. toctree::
    :maxdepth: 2
    :caption: Contents
+
+   
    introduction
    usage
+   changelog
    contact
 
