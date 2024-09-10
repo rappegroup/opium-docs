@@ -12,8 +12,8 @@ first-principles calculations.
 At present, OPIUM is capable of the following:
 
 #. Scalar-relativistic, fully-relativistic, and non-relativistic pseudopotential generation 
-#. Support for LDA, GGA, Hartree-Fock, hybrid[#]_, and range-seporated hybrid[#]_ exchange-corralation (XC) functionals
-#. Constructing Optimized[#]_ (RRKJ) or Kerker[#]_ pseudopotentials 
+#. Support for LDA, GGA, Hartree-Fock, hybrid [#]_, and range-seporated hybrid[#]_ exchange-corralation (XC) functionals
+#. Constructing Optimized [#]_ (RRKJ) or Kerker [#]_ pseudopotentials 
 #. Partial core correction of Louie, Froyen and Cohen [#]_
 #. Test and generate and test pseudopotentials that support semicore states
 #. Applying augmentation operators designed non-local method of Ramer and Rappe [#]_
