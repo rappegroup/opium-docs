@@ -26,8 +26,8 @@ Grace can be downloaded from `its homepage <https://plasma-gate.weizmann.ac.il/G
 
 .. note::
    OPIUM is tested using `Intel <https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html>`_ 
-   FORTRAN and C compilers. Although attempts have been made to made to allow it to be compatible with other
-   compilers like GNU, CRAY, or NVIDIA, there is no guarantee that outputs would align exactly.
+   FORTRAN and C compilers. Although attempts have been made to allow it to be compatible with other
+   compilers like GNU, AMD, and CRAY, there is no guarantee that outputs would align exactly.
 
 If the above does not work, you can also try:
 
@@ -44,7 +44,7 @@ For help, you can type into the console:
 
    $ ./opium help
 
-And for more specific information on command line, plotting, and keyblock help respectively:
+And for more specific information on command line, plotting, and keyblocks respectively:
 
 .. code-block:: console
 
@@ -54,6 +54,8 @@ And for more specific information on command line, plotting, and keyblock help r
 
 Tutorial
 ========================================
+Using OPIUM involves setting up a parameter file and calling commands. This tutorial will
+illustrate that process with some very simple examples.
 
 
 Hydrogen

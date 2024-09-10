@@ -1,4 +1,4 @@
-Execution Type and Commands
+Execution Types
 ===================================================
 
 Non-interactive execution 
@@ -57,13 +57,16 @@ Interactive mode also has some commands that are not available normally:
 * ``keys`` - keyblock help
 * ``exit`` - exits interactive mode
 
+
 Commands
----------------
+=============================
 
 
 
-Parameter Keyblocks
-===================================================
+Keyblocks
+==============================
+
+Keyblocks are how OPIUM parameter files are structured. 
 
 
 [Atom]
