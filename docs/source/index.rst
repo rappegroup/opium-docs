@@ -3,22 +3,22 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-OPIUM - Pseudopotenal Generation Project
+OPIUM - Pseudopotential Generation Project
 ========================================
-
+                                                   
 OPIUM [#]_ is a program used to generate pseudopotentials for use in
 first-principles calculations. 
 
 At present, OPIUM is capable of the following:
 
 * Scalar-relativistic, fully-relativistic, and non-relativistic pseudopotential generation 
-* Support for LDA, GGA, Hartree-Fock, hybrid [#]_, and range-seporated hybrid [#]_ exchange-corralation (XC) functionals
+* Support for LDA, GGA, Hartree-Fock, hybrid [#]_, and range-separated hybrid [#]_ exchange-correlation (XC) functionals
 * Constructing Optimized [#]_ (RRKJ) or Kerker [#]_ pseudopotentials 
 * Partial core correction of Louie, Froyen and Cohen [#]_
 * Test and generate and test pseudopotentials that support semicore states
 * Applying augmentation operators designed non-local method of Ramer and Rappe [#]_
 * Ghost state checking following the method suggested by Gonze, Stumpf, and Scheffler [#]_
-* Automatic plotting of wavefunctions, potentials, and density using xmgrace 
+* Automatic plotting of wave functions, potentials, and density using xmgrace 
 
 OPIUM also supports the following output formats:
 
@@ -39,10 +39,10 @@ OPIUM also supports the following output formats:
 .. [#] Gonze, Xavier, Peter Käckell, and Matthias Scheffler. "Ghost states for separable, norm-conserving, ab initio pseudopotentials." *Physical Review B* 41.17 (1990): 12264.
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :caption: Contents
-
    introduction
    usage
+   changelog
    contact
 

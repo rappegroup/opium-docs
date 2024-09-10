@@ -1,7 +1,8 @@
 Installation
 ========================================
 
-To install OPIUM, first clone the `OPIUM repository <https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html>`_:
+To install the latest version of OPIUM, first clone the 
+`OPIUM repository <https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html>`_:
 
 .. code-block:: console
 
@@ -26,7 +27,7 @@ Grace can be downloaded from `its homepage <https://plasma-gate.weizmann.ac.il/G
 .. note::
    OPIUM is tested using `Intel <https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html>`_ 
    FORTRAN and C compilers. Although attempts have been made to made to allow it to be compatible with other
-   compullers like GNU, CRAY, or NVIDIA, there is no guarntee that outputs would align exactly.
+   compilers like GNU, CRAY, or NVIDIA, there is no guarantee that outputs would align exactly.
 
 If the above does not work, you can also try:
 
@@ -35,7 +36,7 @@ If the above does not work, you can also try:
 * Using a different C or FORTRAN compiler
 
 
-Starting Steps
+Quick Start
 ========================================
 
 

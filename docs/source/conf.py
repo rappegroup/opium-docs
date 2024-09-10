@@ -9,7 +9,7 @@
 project = 'OPIUM'
 copyright = '2024, OPIUM Group'
 author = 'Andrew M. Rappe'
-release = '4.1.0'
+release = '4.2.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
