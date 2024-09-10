@@ -35,13 +35,18 @@ To use graphical features of Opium, the plotting program ``Grace`` must also be 
 
 If the above does not work, you can also try:
 
-#. Downloading the `statically compiled binary <https://sourceforge.net/projects/opium/>`_ for OPIUM
-#. Trying a different version of OPIUM
-#. Using a different C or FORTRAN compiler
+* Downloading the `statically compiled binary <https://sourceforge.net/projects/opium/>`_ for OPIUM
+* Trying a different version of OPIUM
+* Using a different C or FORTRAN compiler
+
 
 Tutorial
 ------------
 
+
+
+Examples
+------------
 
 
 1: Hydrogen

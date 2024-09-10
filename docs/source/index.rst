@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-OPIUM
+OPIUM - Pseudopotenal Generation Project
 ========================================
 
 OPIUM [#]_ is a program used to generate pseudopotentials for use in
@@ -11,23 +11,23 @@ first-principles calculations.
 
 At present, OPIUM is capable of the following:
 
-#. Scalar-relativistic, fully-relativistic, and non-relativistic pseudopotential generation 
-#. Support for LDA, GGA, Hartree-Fock, hybrid [#]_, and range-seporated hybrid[#]_ exchange-corralation (XC) functionals
-#. Constructing Optimized [#]_ (RRKJ) or Kerker [#]_ pseudopotentials 
-#. Partial core correction of Louie, Froyen and Cohen [#]_
-#. Test and generate and test pseudopotentials that support semicore states
-#. Applying augmentation operators designed non-local method of Ramer and Rappe [#]_
-#. Ghost state checking following the method suggested by Gonze, Stumpf, and Scheffler [#]_
-#. Automatic plotting of wavefunctions, potentials, and density using xmgrace 
+* Scalar-relativistic, fully-relativistic, and non-relativistic pseudopotential generation 
+* Support for LDA, GGA, Hartree-Fock, hybrid [#]_, and range-seporated hybrid[#]_ exchange-corralation (XC) functionals
+* Constructing Optimized [#]_ (RRKJ) or Kerker [#]_ pseudopotentials 
+* Partial core correction of Louie, Froyen and Cohen [#]_
+* Test and generate and test pseudopotentials that support semicore states
+* Applying augmentation operators designed non-local method of Ramer and Rappe [#]_
+* Ghost state checking following the method suggested by Gonze, Stumpf, and Scheffler [#]_
+* Automatic plotting of wavefunctions, potentials, and density using xmgrace 
 
 OPIUM also supports the following output formats:
 
-#. ``.upf`` - Quantum ESPRESSO
-#. ``.recpot`` - CASTEP
-#. ``.fhi`` - ABINIT, JDFTx
-#. ``.ncpp`` - PWSCF
-#. ``.pwf`` - Bh
-#. ``.cpi`` - FHI98md
+* ``.upf`` - Quantum ESPRESSO
+* ``.recpot`` - CASTEP
+* ``.fhi`` - ABINIT, JDFTx
+* ``.ncpp`` - PWSCF
+* ``.pwf`` - Bh
+* ``.cpi`` - FHI98md
 
 .. [#] Open-source Pseudopotential Interface / Unification Module (OPIUM)
 .. [#] Yang, Jing, Liang Z. Tan, and Andrew M. Rappe. "Hybrid functional pseudopotentials." *Physical Review B* 97.8 (2018): 085130.
