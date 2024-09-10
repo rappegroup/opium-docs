@@ -1,5 +1,5 @@
 License and Support
-=====
+========================================
 Opium is distributed under the `GNU General Public License <https://www.gnu.org/licenses/gpl-3.0.txt>`_.
 
 The OPIUM project is currently under the active development by the `Andrew M. Rappe Group <https://web.sas.upenn.edu/rappe-lab/>`_ 
