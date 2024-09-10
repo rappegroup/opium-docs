@@ -43,6 +43,5 @@ OPIUM also supports the following output formats:
    :caption: Contents
    introduction
    usage
-   changelog
    contact
 

@@ -52,7 +52,6 @@ And for more specific information on command line, plotting, and keyblock help r
    $ ./opium -p
    $ ./opium -k
 
-
 Tutorial
 ========================================
 
