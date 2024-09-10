@@ -1,8 +1,5 @@
-Introduction
-=====
-
 Installation
-------------
+========================================
 
 To install OPIUM, first clone the `OPIUM repository <https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html>`_:
 
@@ -39,18 +36,19 @@ If the above does not work, you can also try:
 
 
 Starting Steps
-------------
+========================================
 
 
 
 Example Codes
-------------
+========================================
+
 
 Hydrogen
-~~~~~~~~~~
+----------
 
 Carbon
-~~~~~~~~~~
+----------
 
 Aluminum
-~~~~~~~~~~
+----------
