@@ -6,8 +6,8 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'opium'
-copyright = '2024, Andrew M. Rappe'
+project = 'OPIUM'
+copyright = '2024, OPIUM Group'
 author = 'Andrew M. Rappe'
 release = '4.1.0'
 
