@@ -2,7 +2,8 @@ Execution Type and Commands
 ===================================================
 
 Non-interactive execution 
-------------
+--------------------------
+
 Non-interactive execution is the preferred method of running OPIUM. It is called
 using the following:
 
@@ -14,7 +15,7 @@ Where
 
 * ``input.param`` is a parameter file, with the necessary keyblocks.
 * ``output.txt`` is the output file to be created.
-* ``command1``, ``command2``, etc are different :ref:`Commands<Commands>` that can be executed.
+* ``command1``, ``command2``, etc are different commands that can be executed.
 
 For example, given some parameter file ``c.param``, to do the all-electron (AE) solve, generate the pseudopotential, 
 generate a report, and write the output to a ``.upf`` file for quantum ESPRESSO, one should execute the following command:
@@ -27,7 +28,8 @@ As of the 1.0.1 release, ``.param`` is implied, so it is not required to be spec
 
 
 Interactive execution 
-------------
+-----------------------
+
 
 .. note::
     Interactive execution is not tested as thoroughly as non-interactive use and 
@@ -56,11 +58,12 @@ Interactive mode also has some commands that are not available normally:
 * ``exit`` - exits interactive mode
 
 Commands
-------------
+---------------
+
 
 
 Parameter Keyblocks
-========================================
+===================================================
 
 
 [Atom]

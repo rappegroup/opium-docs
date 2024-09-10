@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 OPIUM - Pseudopotential Generation Project
-========================================
+===================================================
                                                    
 OPIUM [#]_ is a program used to generate pseudopotentials for use in
 first-principles calculations. 
@@ -42,7 +42,7 @@ OPIUM also supports the following output formats:
    :maxdepth: 2
    :caption: Contents
 
-   
+
    introduction
    usage
    changelog
