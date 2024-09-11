@@ -13,9 +13,9 @@ using the following:
 
 Where
 
-* ``input.param`` is a parameter file, with the necessary keyblocks.
-* ``output.txt`` is the output file to be created.
-* ``command1``, ``command2``, etc are different commands that can be executed.
+* ``input.param`` is a :ref:`parameter file <parameter>` with the necessary keyblocks
+* ``output.txt`` is the output file to be created
+* ``command1``, ``command2``, etc are different :ref:`commands <commands>` that can be executed
 
 For example, given some parameter file ``c.param``, to do the all-electron (AE) solve, generate the pseudopotential, 
 generate a report, and write the output to a ``.upf`` file for quantum ESPRESSO, one should execute the following command:
@@ -51,7 +51,7 @@ The output will be identical to if the commands were called by the non-interacti
 Interactive mode also has :ref:`some commands <interactive mode commands>` that are not available normally. 
 To exit the interactive mode, type the command ``exit``.
 
-
+.. _commands:
 Commands
 =============================
 The following commands are available in the current release of OPIUM. 
@@ -151,10 +151,12 @@ Additional options:
      - Generate a report file
 
 
-Keyblocks
+.. _parameter:
+Parameter File
 ==============================
 
-Keyblocks are how OPIUM parameter files are structured. 
+OPIUM parameter files are structured using keyblocks that are parsed
+by the `FlexiLib <https://spinor.sourceforge.net/FlexiLib/index.html>`_ library. 
 
 
 [Atom]

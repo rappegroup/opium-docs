@@ -13,7 +13,8 @@ OPIUM - Pseudopotential Generation Project
 
 
 OPIUM [#]_ is a program used to generate pseudopotentials for use in
-first-principles calculations. 
+first-principles calculations. The current stable release is v4.1.0, which
+is available `here <https://github.com/rappegroup/opium>`_.
 
 At present, OPIUM is capable of the following:
 
