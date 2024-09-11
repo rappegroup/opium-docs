@@ -18,7 +18,7 @@ Change Log
 #.  Modified treatment of unbound states to work with semicore (thanks Sara!)
 #. Modified output for .ncpp and .fhi to indicate PW XC correctly
 #. Changed MacOSX configure defs so -r8 included by default
-#. Major modfication of ghost state reporting, now states whether ghost testing was inconclusive (no bound states for local potential)
+#. Major modification of ghost state reporting, now states whether ghost testing was inconclusive (no bound states for local potential)
 #. Ghost testing added for unbound states as local or non-local
 #. Interp.f output cleaned up
 #. Logder plotting states that no [loginfo] key block is set (not just a core dump!)
@@ -94,7 +94,7 @@ Change Log
 ----------------
 
 #. Change in versioning scheme (3 numbers is too many).
-#. Removal of relativisitc grid, now srl potentials use the same grid as the nrl grid.  This means that the following routines have been removed: (atm.F, difrel.F, etotal.F, dsolv2.F, velect.F)
+#. Removal of relativistic grid, now srl potentials use the same grid as the nrl grid.  This means that the following routines have been removed: (atm.F, difrel.F, etotal.F, dsolv2.F, velect.F)
 #. Ability to perform unbound states in a srl potential has been added
 #. A modified version of the Hartree-Fock code by C. Froese-Fischer and G. Gaigalas has been incorporated into OPIUM to construct HF psps.
 #. A modified version of the Dirac-Fock code by A.L. Ankudinov, S.I. Zabinsky, J.J. Rehr has been incorporated into OPIUM to construct srl HF psps.
@@ -108,7 +108,7 @@ Change Log
 #. Default grid now extends to 120 au. 
 #. Ability to do semi-local tests in DFT resurrected.  For now, HF tests can only be done via "sl", trying "nl" throws an warning and reverts to sl.  The "tc" command performs "nl" tests for DFT psps and "sl" tests for HF psps.
 #. The Wu-Cohen GGA and Perdew-Wang 91 GGA functionals were added to excorr.
-#. GGA XC functionals are changed to LDA smoothly starting at 0.001 bohr and ending at 0.0 bohr.  This is due to heavier atoms resulting in "spikes" occuring near r=0.0 (this comes from the GGA enchancement terms behaving badly where the density gets very small).  This is only done automatically for Z>36, for Z<=36 no smoothing is done.
+#. GGA XC functionals are changed to LDA smoothly starting at 0.001 bohr and ending at 0.0 bohr.  This is due to heavier atoms resulting in "spikes" occurring near r=0.0 (this comes from the GGA enhancement terms behaving badly where the density gets very small).  This is only done automatically for Z>36, for Z<=36 no smoothing is done.
 #. The behavior of unbound states has changed.  Now a occupation number < 0 signals that the state should be treated as unbound.  If the state is NOT marked as unbound and the solver can't find a bound state, the run fails (it used to mark such a state as unbound and keep going).  If the state is constructed as unbound and a test case DOES NOT indicate and unbound state, it will use the psp to try and find a bound state.
 #. Instead of having each part of the code figure out the correct states for a semicore calculation, the parameter.c routine now REORDERS the param file on the fly to put all states in s,p,d,f,s,p,d,f etc. order, i.e. the first instance of each 'l' is put in increasing 'l' order, then the next instance of each 'l' is put in increasing 'l' order, etc. until there are no more valence states. The Atom, Configs, Pseudo, and Optinfo keyblocks are all reordered the same way. 
 
@@ -166,7 +166,7 @@ Bugfix release:
 3.6
 ----------------
 
-#. Added fully-relativisitc psps -- needed significant modifications which resulted in many routines needed changing
+#. Added fully-relativistic psps -- needed significant modifications which resulted in many routines needed changing
 #. Restored most if not all of the support for separate command line action (>>opium al log ae ; >>opium al log ps ; etc..) which had been lost in previous releases.
 #. Implemented QuantumESPRESSO's upf version 1 psp output.  Version 2 is in progress.
 #. Added DNL modifications from Ben Truscott
