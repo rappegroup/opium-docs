@@ -30,7 +30,6 @@ As of the 1.0.1 release, ``.param`` is implied, so it is not required to be spec
 Interactive execution 
 -----------------------
 
-
 .. note::
     Interactive execution is not tested as thoroughly as non-interactive use and 
     should be avoided if possible.
@@ -59,73 +58,97 @@ The following commands are available in the current release of OPIUM.
 
 Commands for atomic solve and pseudopotential construction:
 
-.. table::
+.. list-table::
    :widths: auto
-   ============  ===============================================================
-      Command      Description
-   ============  ================================================================
-     ``ae``       Performs all electron (AE) solve of the atom 
-     ``ps``       Construct a pseudopotential from the AE solve
-     ``nl``       Solve using the pseudopotential for a reference state
-     ``tc``       Solve using the pseudopotential and AE for test configurations
-     ``ke``       Optimize the kinetic energy using the RRKJ method
-     ``aa``       Shorthand for ``ae ps nl tc`` 
-   ============  ================================================================
+   :header-rows: 1
+
+   * - Command
+     - Description
+   * - ``ae``
+     - Performs all electron (AE) solve of the atom
+   * - ``ps``
+     - Construct a pseudopotential from the AE solve
+   * - ``nl``
+     - Solve using the pseudopotential for a reference state
+   * - ``tc``
+     - Solve using the pseudopotential and AE for test configurations
+   * - ``ke``
+     - Optimize the kinetic energy using the RRKJ method
+   * - ``aa``
+     - Shorthand for ``ae ps nl tc``
 
 Commands for indicating output style:
 
-.. table::
+.. list-table::
    :widths: auto
-   ============  ===============================================================
-      Command      Description
-   ============  ================================================================
-     ``upf``      Generate \*.upf output (for Quantum ESPRESSO) 
-     ``fhi``      Generates \*.fhi and \*.cpi outputs (for ABINIT and FHI98MD)
-     ``pwf``      Generate \*.pwf output (for BH)
-     ``ncpp``     Generate \*.ncpp output (for PWSCF) 
-     ``recpot``   Generate \*.recpot output (for CASTEP)   
-   ============  ================================================================
+   :header-rows: 1
+
+   * - Command
+     - Description
+   * - ``upf``
+     - Generate \*.upf output (for Quantum ESPRESSO)
+   * - ``fhi``
+     - Generates \*.fhi and \*.cpi outputs (for ABINIT and FHI98MD)
+   * - ``pwf``
+     - Generate \*.pwf output (for BH)
+   * - ``ncpp``
+     - Generate \*.ncpp output (for PWSCF)
+   * - ``recpot``
+     - Generate \*.recpot output (for CASTEP)
 
 Commands for plotting:
 
-.. table::
+.. list-table::
    :widths: auto
-   =============  =================================================================
-      Command      Description
-   =============  =================================================================
-   ``plot wa``     Plots all-electron wavefunctions
-   ``plot wp``     Plots pseudo and all-electron wavefunctions
-   ``plot pcc``    Plots core, valance, and partial core densities
-   ``plot vs``     Plots screened pseudopotentials
-   ``plot vi``     Plots the ionic (descreened) pseudopotentials
-   ``plot qp``     Plots the q-space pseudo-wavefunctions and potentials
-   ``plot logd``   Plots logarithmic derivative state in the ``[Loginfo]`` keyblock
-   =============  ==================================================================
+   :header-rows: 1
+
+   * - Command
+     - Description
+   * - ``plot wa``
+     - Plots all-electron wavefunctions
+   * - ``plot wp``
+     - Plots pseudo and all-electron wavefunctions
+   * - ``plot pcc``
+     - Plots core, valence, and partial core densities
+   * - ``plot vs``
+     - Plots screened pseudopotentials
+   * - ``plot vi``
+     - Plots the ionic (descreened) pseudopotentials
+   * - ``plot qp``
+     - Plots the q-space pseudo-wavefunctions and potentials
+   * - ``plot logd``
+     - Plots logarithmic derivative state in the ``[Loginfo]`` keyblock
 
 .. _interactive mode commands:
 Commands exclusive to interactive mode:
 
-.. table::
+.. list-table::
    :widths: auto
-   ============  ===============================================================
-      Command      Description
-   ============  ================================================================
-     ``v``        Toggles verbosity flag in interactive mode
-     ``comm``     Prints command line help
-     ``plot``     Prints plotting help
-     ``keys``     Prints keyblock help
-     ``exit``     Exits the interactive mode
-   ============  ================================================================
+   :header-rows: 1
+
+   * - Command
+     - Description
+   * - ``v``
+     - Toggles verbosity flag in interactive mode
+   * - ``comm``
+     - Prints command line help
+   * - ``plot``
+     - Prints plotting help
+   * - ``keys``
+     - Prints keyblock help
+   * - ``exit``
+     - Exits the interactive mode
 
 Additional options:
 
-.. table::
+.. list-table::
    :widths: auto
-   ============  ===============================================================
-      Command      Description
-   ============  ================================================================
-     ``rpt``      Generate a report file
-   ============  ================================================================
+   :header-rows: 1
+
+   * - Command
+     - Description
+   * - ``rpt``
+     - Generate a report file
 
 
 Keyblocks
