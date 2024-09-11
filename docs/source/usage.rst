@@ -14,7 +14,7 @@ using the following:
 Where
 
 * ``input.param`` is a :ref:`parameter file <parameter>` with the necessary keyblocks
-* ``output.txt`` is the output file to be created
+* ``output.txt`` is the :ref:`output file <output>` to be created
 * ``command1``, ``command2``, etc are different :ref:`commands <commands>` that can be executed
 
 For example, given some parameter file ``c.param``, to do the all-electron (AE) solve, generate the pseudopotential, 
@@ -86,9 +86,11 @@ Commands for indicating output style:
    * - Command
      - Description
    * - ``upf``
-     - Generate \*.upf output (for Quantum ESPRESSO)
+     - Generate v2.0.1 ``.upf`` output (for Quantum ESPRESSO)
+   * - ``oldupf``
+     - Generate legacy ``.upf`` output (for older versions of Quantum ESPRESSO)
    * - ``fhi``
-     - Generates \*.fhi and \*.cpi outputs (for ABINIT and FHI98MD)
+     - Generates ``.fhi`` and ``.cpi`` outputs (for ABINIT and FHI98MD)
    * - ``pwf``
      - Generate \*.pwf output (for BH)
    * - ``ncpp``
@@ -205,3 +207,7 @@ by the `FlexiLib <https://spinor.sourceforge.net/FlexiLib/index.html>`_ library.
 
 [Loginfo]
 ------------
+
+.. _output:
+Output File
+==============================
