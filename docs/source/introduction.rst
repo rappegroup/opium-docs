@@ -224,22 +224,22 @@ there are 3 states in the ``[Configs]`` keyblock, there are 3 differences here:
 
    AE-NL: Orbital Filling       Eigenvalues[mRy]         Norm[1e-3] 
    AE-NL- --------------------------------------------------------------
-   AE-NL-     100   0.750	        -0.9812641227	   -1.6996433434	
-   AE-NL-   total error =	         0.9812641227	    1.6996433434
+   AE-NL-     100   0.750          -0.9812641227      -1.6996433434	
+   AE-NL-   total error =           0.9812641227       1.6996433434
 
 .. code-block::
 
    AE-NL: Orbital Filling       Eigenvalues[mRy]         Norm[1e-3] 
    AE-NL- --------------------------------------------------------------
-   AE-NL-     100   0.500	        -3.7382161298	   -3.7786023814	
-   AE-NL-   total error =	         3.7382161298	    3.7786023814
+   AE-NL-     100   0.500          -3.7382161298      -3.7786023814	
+   AE-NL-   total error =           3.7382161298       3.7786023814
 
 .. code-block::
 
    AE-NL: Orbital Filling       Eigenvalues[mRy]         Norm[1e-3] 
    AE-NL- --------------------------------------------------------------
-   AE-NL-     100   0.350	        -6.4826340677	   -5.1011748701	
-   AE-NL-   total error =	         6.4826340677	    5.1011748701
+   AE-NL-     100   0.350          -6.4826340677      -5.1011748701	
+   AE-NL-   total error =           6.4826340677       5.1011748701
 
 There is also a table of total energy difference:
 
@@ -300,22 +300,22 @@ Transferability:
 
    AE-NL: Orbital Filling       Eigenvalues[mRy]         Norm[1e-3] 
    AE-NL- --------------------------------------------------------------
-   AE-NL-     100   0.750	        -0.3344105826	   -0.7582606862	
-   AE-NL-   total error =	         0.3344105826	    0.7582606862
+   AE-NL-     100   0.750          -0.3344105826      -0.7582606862	
+   AE-NL-   total error =           0.3344105826      0.7582606862
 
 .. code-block::
 
    AE-NL: Orbital Filling       Eigenvalues[mRy]         Norm[1e-3] 
    AE-NL- --------------------------------------------------------------
-   AE-NL-     100   0.500	        -1.3394630445	   -1.8146139118
-   AE-NL-   total error =	         1.3394630445	    1.8146139118
+   AE-NL-     100   0.500          -1.3394630445      -1.8146139118
+   AE-NL-   total error =           1.3394630445       1.8146139118
 
 .. code-block::
 
    AE-NL: Orbital Filling       Eigenvalues[mRy]         Norm[1e-3] 
    AE-NL- --------------------------------------------------------------
-   AE-NL-     100   0.350	        -2.3941203051	   -2.5689934304
-   AE-NL-   total error =	         2.3941203051	    2.5689934304
+   AE-NL-     100   0.350          -2.3941203051      -2.5689934304
+   AE-NL-   total error =           2.3941203051       2.5689934304
 
 .. code-block::
 
