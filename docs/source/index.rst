@@ -8,6 +8,7 @@ OPIUM - Pseudopotential Generation Project
 
 .. image:: OPIUM-dark.png
    :width: 600
+   :height: 173
    :align: center
    :alt: OPIUM logo
                                                    
