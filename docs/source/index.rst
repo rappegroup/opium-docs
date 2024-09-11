@@ -7,7 +7,7 @@ OPIUM - Pseudopotential Generation Project
 ===================================================
 
 .. image:: OPIUM-dark.png
-   :scale: 10 %
+   :scale: 5 %
    :align: center
    :alt: OPIUM logo
                                                    
