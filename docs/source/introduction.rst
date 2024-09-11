@@ -162,7 +162,7 @@ the log file. Then examine the pseudopotential section on the report file.
                      Pseudopotential convergence error                      
    Orbital      [mRy/e]       [meV/e]         [mRy]        [meV]        Ghost
    --------------------------------------------------------------------------
-   100        20.611832    280.438402     20.611832   280.438402	         no
+   100        20.611832    280.438402     20.611832   280.438402        no
 
                          Tot. error =     20.611832   280.438402
 
@@ -178,12 +178,14 @@ to to the 1s peak. This can be done by:
 
    $ ./opium h.param h.log plot wa
 
-<br>
+
+
 .. image:: h_ae.png
    :scale: 60 %
    :align: left
    :alt: h_ae plot
-<br>
+
+
 
 The cut-off radius is around 1.80 Angstroms and is pretty far from the peak, which
 is at around 1.00 Angstroms. Therefore, it is probably better to increase qc.
@@ -211,7 +213,7 @@ only 2.61 meV.
                      Pseudopotential convergence error                      
    Orbital      [mRy/e]       [meV/e]         [mRy]        [meV]        Ghost
    --------------------------------------------------------------------------
-   100         0.192534      2.619559      0.192534     2.619559	         no
+   100         0.192534      2.619559      0.192534     2.619559        no
 
                          Tot. error =      0.192534     2.619559
 
@@ -291,7 +293,7 @@ Convergence error:
                      Pseudopotential convergence error                      
    Orbital      [mRy/e]       [meV/e]         [mRy]        [meV]        Ghost
    --------------------------------------------------------------------------
-   100         0.422277      5.745376      0.422277     5.745376	         no
+   100         0.422277      5.745376      0.422277     5.745376        no
 
                          Tot. error =      0.422277     5.745376
 
@@ -346,6 +348,6 @@ More advanced walkthroughs are available as documents:
 #. :download:`Carbon <c_tut.pdf>` - Atoms with more than 1 orbitals 
 #. :download:`Aluminum <al_tut.pdf>` - Different pseudopotential construction methods and transferability testing
 #. :download:`Copper <cu_tut.pdf>` - Testing for ghost states
-#. :download:`Titanium <ti_tut.pdf>` — Constructing semi-core states
+#. :download:`Titanium <ti_tut.pdf>` - Constructing semi-core states
 #. :download:`Iron <fe_tut.pdf>` - Utilizing a partial core correction
 #. :download:`Platinum <pt_tut.pdf>` - Scalar-relativistic pseudopotentials
