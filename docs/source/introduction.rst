@@ -28,12 +28,14 @@ or by running the following commands.
 For Linux:
 
 .. code-block:: console
+
    $ sudo apt-get update
    $ sudo apt-get install grace
 
 For MacOS:
 
 .. code-block:: console
+   
    $ brew install grace
 
 .. note::
