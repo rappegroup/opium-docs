@@ -2,7 +2,7 @@ Installation
 ========================================
 
 To install the latest version of OPIUM, first clone the 
-`OPIUM repository <https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html>`_:
+`OPIUM repository <https://github.com/rappegroup/opium>`_:
 
 .. code-block:: console
 

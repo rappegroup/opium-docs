@@ -11,3 +11,4 @@ docs/build/
 # Python virtual env
 .env
 .venv
+docs/.DS_Store

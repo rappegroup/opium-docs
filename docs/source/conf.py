@@ -9,7 +9,7 @@
 project = 'OPIUM'
 copyright = '2024, OPIUM Group'
 author = 'Andrew M. Rappe'
-release = '4.2.0'
+release = '4.2'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -19,13 +19,13 @@ extensions = ["sphinx_rtd_theme"]
 templates_path = ['_templates']
 exclude_patterns = []
 
-
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinx_rtd_theme'
-html_static_path = ['_static']
+# html_static_path = ['_static']
 html_logo = 'OPIUM-white.png'
+html_favicon = 'OPIUM-favicon.ico'
 html_theme_options = {
     'logo_only': True,
     'display_version': True
