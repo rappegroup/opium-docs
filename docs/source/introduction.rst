@@ -179,11 +179,9 @@ to to the 1s peak. This can be done by:
    $ ./opium h.param h.log plot wa
 
 
-
 .. image:: h_ae.png
    :scale: 60 %
    :alt: h_ae plot
-
 
 
 The cut-off radius is around 1.80 Angstroms and is pretty far from the peak, which

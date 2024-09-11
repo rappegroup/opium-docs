@@ -56,7 +56,10 @@ Commands
 =============================
 The following commands are available in the current release of OPIUM. 
 
-Commands for atomic solve and pseudopotential construction:
+
+Solve and pseudopotential construction
+-----------------------------------------
+
 
 .. list-table::
    :widths: auto
@@ -77,7 +80,8 @@ Commands for atomic solve and pseudopotential construction:
    * - ``aa``
      - Shorthand for ``ae ps nl tc``
 
-Commands for indicating output style:
+Output style
+--------------------
 
 .. list-table::
    :widths: auto
@@ -98,7 +102,9 @@ Commands for indicating output style:
    * - ``recpot``
      - Generate \*.recpot output (for CASTEP)
 
-Commands for plotting:
+
+Plotting
+--------------------
 
 .. list-table::
    :widths: auto
@@ -122,7 +128,8 @@ Commands for plotting:
      - Plots logarithmic derivative state in the ``[Loginfo]`` keyblock
 
 .. _interactive mode commands:
-Commands exclusive to interactive mode:
+Interactive mode
+--------------------
 
 .. list-table::
    :widths: auto
@@ -141,7 +148,8 @@ Commands exclusive to interactive mode:
    * - ``exit``
      - Exits the interactive mode
 
-Additional options:
+Reports
+--------------------
 
 .. list-table::
    :widths: auto
