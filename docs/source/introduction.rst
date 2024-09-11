@@ -182,7 +182,6 @@ to to the 1s peak. This can be done by:
 
 .. image:: h_ae.png
    :scale: 60 %
-   :align: left
    :alt: h_ae plot
 
 
