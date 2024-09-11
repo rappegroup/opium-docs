@@ -10,8 +10,8 @@ OPIUM - Pseudopotential Generation Project
    :scale: 30 %
    :align: center
    :alt: OPIUM logo
-                                   
-                                                   
+
+
 OPIUM [#]_ is a program used to generate pseudopotentials for use in
 first-principles calculations. 
 
@@ -34,6 +34,8 @@ OPIUM also supports the following output formats:
 * ``.ncpp`` - PWSCF
 * ``.pwf`` - Bh
 * ``.cpi`` - FHI98md
+
+Legacy information regarding OPIUM can be found on the `old sourceforge page <https://opium.sourceforge.net/>`_.
 
 .. [#] Open-source Pseudopotential Interface / Unification Module (OPIUM)
 .. [#] Yang, Jing, Liang Z. Tan, and Andrew M. Rappe. "Hybrid functional pseudopotentials." *Physical Review B* 97.8 (2018): 085130.
