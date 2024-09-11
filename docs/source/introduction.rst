@@ -78,7 +78,6 @@ augment this file based on OPIUM's outputs.
 
 ``h.param``:
 .. code-block::
-   :linenos:
 
    [Atom]
    H
@@ -155,16 +154,14 @@ the log file. Then examine the pseudopotential section on the report file.
 
 .. code-block::
 
-   ### PS report ########################################
+   ====================Optimized pseudopotential method====================
 
-       ====================Optimized pseudopotential method====================
+                     Pseudopotential convergence error                      
+   Orbital      [mRy/e]       [meV/e]         [mRy]        [meV]        Ghost
+   --------------------------------------------------------------------------
+   100        20.611832    280.438402     20.611832   280.438402	       no
 
-                          Pseudopotential convergence error                      
-       Orbital      [mRy/e]       [meV/e]         [mRy]        [meV]        Ghost
-       --------------------------------------------------------------------------
-	    100        20.611832    280.438402     20.611832   280.438402	       no
-
-                             Tot. error =     20.611832   280.438402
+                         Tot. error =     20.611832   280.438402
 
 This error seems very large. The pseudopotential would have approximately 
 280 meV error when run at a converged cut-off energy. 
@@ -178,10 +175,12 @@ to to the 1s peak. This can be done by:
 
    $ ./opium h.param h.log plot wa
 
+
 .. image:: h_ae.png
-   :scale: 30 %
+   :scale: 60 %
    :align: left
    :alt: h_ae plot
+
 
 The cut-off radius is around 1.80 Angstroms and is pretty far from the peak, which
 is at around 1.00 Angstroms. Therefore, it is probably better to increase qc.
@@ -204,16 +203,14 @@ only 2.61 meV.
 
 .. code-block::
 
-   ### PS report ########################################
+   ====================Optimized pseudopotential method====================
 
-       ====================Optimized pseudopotential method====================
+                     Pseudopotential convergence error                      
+   Orbital      [mRy/e]       [meV/e]         [mRy]        [meV]        Ghost
+   --------------------------------------------------------------------------
+   100         0.192534      2.619559      0.192534     2.619559	       no
 
-                          Pseudopotential convergence error                      
-       Orbital      [mRy/e]       [meV/e]         [mRy]        [meV]        Ghost
-       --------------------------------------------------------------------------
-	    100         0.192534      2.619559      0.192534     2.619559	       no
-
-                             Tot. error =      0.192534     2.619559
+                         Tot. error =      0.192534     2.619559
 
 Then we can check the transferability. This is a measure of how effective the
 pseudopotentials is at configurations that are not the reference. Check the section for 
@@ -222,25 +219,30 @@ the difference between the all-electron and pseudopotential calculations. Since
 there are 3 states in the ``[Configs]`` keyblock, there are 3 differences here:
 
 .. code-block::
+
    AE-NL: Orbital Filling       Eigenvalues[mRy]         Norm[1e-3] 
    AE-NL- --------------------------------------------------------------
    AE-NL-     100   0.750	        -0.9812641227	   -1.6996433434	
    AE-NL-   total error =	         0.9812641227	    1.6996433434
 
 .. code-block::
+
    AE-NL: Orbital Filling       Eigenvalues[mRy]         Norm[1e-3] 
    AE-NL- --------------------------------------------------------------
    AE-NL-     100   0.500	        -3.7382161298	   -3.7786023814	
    AE-NL-   total error =	         3.7382161298	    3.7786023814
 
 .. code-block::
+
    AE-NL: Orbital Filling       Eigenvalues[mRy]         Norm[1e-3] 
    AE-NL- --------------------------------------------------------------
    AE-NL-     100   0.350	        -6.4826340677	   -5.1011748701	
    AE-NL-   total error =	         6.4826340677	    5.1011748701
 
 There is also a table of total energy difference:
+
 .. code-block::
+
    AE-NL-   i   j         DD[mRy]        DD[meV] 
    AE-NL- ------------------------------------------
    AE-NL-   0   1        -0.093540      -1.272673
@@ -280,36 +282,41 @@ is also within a tolerable range.
 Convergence error:
 
 .. code-block::
-    ====================Optimized pseudopotential method====================
 
-                       Pseudopotential convergence error                      
-    Orbital      [mRy/e]       [meV/e]         [mRy]        [meV]        Ghost
-    --------------------------------------------------------------------------
-    100         0.422277      5.745376      0.422277     5.745376	       no
+   ====================Optimized pseudopotential method====================
 
-                          Tot. error =      0.422277     5.745376
+                     Pseudopotential convergence error                      
+   Orbital      [mRy/e]       [meV/e]         [mRy]        [meV]        Ghost
+   --------------------------------------------------------------------------
+   100         0.422277      5.745376      0.422277     5.745376	       no
+
+                         Tot. error =      0.422277     5.745376
 
 Transferability:
 
 .. code-block::
+
    AE-NL: Orbital Filling       Eigenvalues[mRy]         Norm[1e-3] 
    AE-NL- --------------------------------------------------------------
    AE-NL-     100   0.750	        -0.3344105826	   -0.7582606862	
    AE-NL-   total error =	         0.3344105826	    0.7582606862
 
 .. code-block::
+
    AE-NL: Orbital Filling       Eigenvalues[mRy]         Norm[1e-3] 
    AE-NL- --------------------------------------------------------------
    AE-NL-     100   0.500	        -1.3394630445	   -1.8146139118
    AE-NL-   total error =	         1.3394630445	    1.8146139118
 
 .. code-block::
+
    AE-NL: Orbital Filling       Eigenvalues[mRy]         Norm[1e-3] 
    AE-NL- --------------------------------------------------------------
    AE-NL-     100   0.350	        -2.3941203051	   -2.5689934304
    AE-NL-   total error =	         2.3941203051	    2.5689934304
 
 .. code-block::
+
    AE-NL-   i   j         DD[mRy]        DD[meV] 
    AE-NL- ------------------------------------------
    AE-NL-   0   1        -0.031401      -0.427230
@@ -334,7 +341,7 @@ Further Examples
 More advanced walkthroughs are available as documents:
 
 #. :download:`Carbon <c_tut.pdf>` - Atoms with more than 1 orbitals 
-#. :download:`Aluminum <al_tut.pdf>` - Different pseudopotential construction methods and to discuss transferability testing
+#. :download:`Aluminum <al_tut.pdf>` - Different pseudopotential construction methods and transferability testing
 #. :download:`Copper <cu_tut.pdf>` - Testing for ghost states
 #. :download:`Titanium <ti_tut.pdf>` — Constructing semi-core states
 #. :download:`Iron <fe_tut.pdf>` - Utilizing a partial core correction
