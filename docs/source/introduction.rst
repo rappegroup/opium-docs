@@ -39,6 +39,7 @@ For MacOS:
    $ brew install grace
 
 .. note::
+
    OPIUM is tested using `Intel <https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html>`_ 
    FORTRAN and C compilers. Although attempts have been made to allow it to be compatible with other
    compilers like GNU, AMD, and CRAY, there is no guarantee that outputs would align exactly.
@@ -149,8 +150,8 @@ This runs the following 5 commands:
 
 Running the commands should generate at least two files:
 
-* ``h.log`` - log file that contains all of the output from the commands and indicates any errors or warnings
-* ``h.rpt`` - Report file that offers information on the pseudopotential
+* ``h.log`` - Contains all of the output from the commands and indicates any errors or warnings
+* ``h.rpt`` - Offers a quick summary report of the pseudopotential properties
 
 For this simple calculation, there should be no issues with that would be reflected in
 the log file. Then examine the pseudopotential section on the report file. 
@@ -180,7 +181,7 @@ to to the 1s peak. This can be done by:
 
 
 .. image:: h_ae.png
-   :scale: 60 %
+   :scale: 75 %
    :alt: h_ae plot
 
 
@@ -301,7 +302,7 @@ Transferability:
    AE-NL: Orbital Filling       Eigenvalues[mRy]         Norm[1e-3] 
    AE-NL- --------------------------------------------------------------
    AE-NL-     100   0.750          -0.3344105826      -0.7582606862	
-   AE-NL-   total error =           0.3344105826      0.7582606862
+   AE-NL-   total error =           0.3344105826       0.7582606862
 
 .. code-block::
 
@@ -340,6 +341,12 @@ Where ``all`` is a shorthand for ``ae ps nl tc``. This should create a
 
 Further Examples
 ---------------------
+
+.. note::
+
+   Many of these walkthroughs were created with an older version of OPIUM.
+   Results and syntax may not align exactly with newer versions.
+
 More advanced walkthroughs are available as documents:
 
 #. :download:`Carbon <c_tut.pdf>` - Atoms with more than 1 orbitals 
