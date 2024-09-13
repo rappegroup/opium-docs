@@ -58,7 +58,7 @@ Commands
 The following commands are available in the current release of OPIUM. 
 
 
-Solve and pseudopotential construction
+Pseudopotential construction
 -----------------------------------------
 
 
@@ -173,7 +173,9 @@ by the `FlexiLib <https://spinor.sourceforge.net/FlexiLib/index.html>`_ library.
 
 
 ``[Atom]``\*
-------------
+-------------
+Basic information regarding the atom and its orbitals.
+
 .. code-block::
 
   [Atom]
@@ -222,10 +224,15 @@ An unbound valence state can be indicated by making the occupation value negativ
 This invokes the Hamman generalized state method and the occupation is set to 0. 
 You should also specify an eigenvalue guess (can be positive or negative) for 
 the energy of this state. If a ``-`` is in the eigenvalue guess, 
-the energy of this state is set to 0.0 
+the energy of this state is set to 0.0.
+
 
 ``[Pseudo]``\*
-------------
+----------------
+Information on the number of orbitals in the pseudopotential,
+where the cutoff for the pseudopotential construction should be, as well as what method to 
+use when constructing the pseudopotential. The method is determined solely by the first character. 
+For instance, putting ``opt`` will also invoke the optimized pseudopotential method. 
 
 .. code-block::
 
@@ -252,12 +259,12 @@ the energy of this state is set to 0.0
      - Cut of radius for a single pseudo orbital
    * - ``method``
      - ``o``, ``k``, or ``t``
-     - Optimized (o), Kerker (k), or Troullier-Martins (t) pseudopotential construction method
+     - Optimized (``o``), Kerker (``k``), or Troullier-Martins (``t``) pseudopotential construction method
 
 .. note::
 
-  The method is determined solely by the first character it reads. For instance,
-  putting ``opt`` will also invoke the optimized pseudopotential method as well.
+  If the optimized pseudopotential method is used, the ``[Optinfo]`` keyblock is
+  mandatory.
 
 Example:
 
@@ -272,17 +279,16 @@ Example:
 
 
 ``[Optinfo]``
-------------
-
-.. note::
-  This keyblock is mandatory if the optimized pseudopotential method is used.
+--------------
+Additional information needed for the optimized pseudopotential
+construction method. This keyblock is mandatory if the optimized pseudopotential method is used.
 
 .. code-block::
 
   [Optinfo]
-  cut-off bessel-functions
-  cut-off bessel-functions
-  cut-off bessel-functions
+  qc bessel-functions
+  qc bessel-functions
+  qc bessel-functions
   ...
 
 .. list-table::
@@ -292,7 +298,7 @@ Example:
    * - Name
      - Format
      - Description
-   * - ``cut-off``
+   * - ``qc``
      - float
      - Cut-off wavevector qc for an orbital
    * - ``bessel-functions``
@@ -311,6 +317,9 @@ Example:
 
 ``[XC]``\*
 ------------
+The choice of exchange-correlation functional to use in
+the pseudopotential construction.
+
 .. code-block::
 
   [XC]
@@ -362,37 +371,156 @@ Example:
   gga
 
 
-
 ``[Pcc]``
 ------------
+Options for applying a partial core correction. The default core radius is 0.0 
+(meaning no partial-core) and the default method, and if a radius but no method is specified,
+``lfc`` is used.
+
+.. code-block::
+
+  [Pcc]
+  radius
+  method
+
+.. list-table::
+   :widths: auto
+   :header-rows: 1
+
+   * - Name
+     - Format
+     - Description
+   * - ``radius``
+     - float
+     - Partial core radius
+   * - ``method``
+     - ``lfc`` or ``fuchs``
+     - Louie, Froyen, and Cohen (``lfc``) or Fuchs and Scheffler (``fuchs``) partial-core method
+
+Example:
+
+.. code-block::
+
+  [Pcc]
+  0.50
+  lfc
 
 
 ``[Relativity]``
-------------
+-----------------
+Whether relativistic corrections should be applied. Default is no relativistic corrections.
+
+.. code-block::
+
+  [Relativity]
+  method
+
+.. list-table::
+   :widths: auto
+   :header-rows: 1
+
+   * - Name
+     - Format
+     - Description
+   * - ``method``
+     - ``nrl``, ``srl``, or ``frl``
+     - Non-relativistic (``nrl``), Scalar-relativistic (``srl``), or fully-relativistic (``frl``)
+
+Scalar-relativistic implements the mass-velocity correction, Darwin correction, and spin-spin interaction.
+fully-relativistic also adds spin-orbit coupling.
+
+Example:
+.. code-block::
+
+  [Relativity]
+  nrl
 
 
 ``[Grid]``
 ------------
+The radial grid the calculation should be done on. Defaults parameters are
+``np`` = 1201, ``a`` = 0.0001, and ``b`` = 0.013. 
+
+.. code-block::
+
+  [Grid]
+  np a b
+
+.. list-table::
+   :widths: auto
+   :header-rows: 1
+
+   * - Name
+     - Format
+     - Description
+   * - ``np``
+     - integer
+     - Number of grid points
+   * - ``a``
+     - float
+     - Grid parameter
+   * - ``b``
+     - float
+     - Grid parameter
+
+The grid is created by the following formula:
+
+.. math::
+
+  r_i = az^{-\frac{1}{3}}e^{(i-1)b} \text{ for } i = 1, \ldots, np
+
+Example:
+.. code-block::
+
+  [Grid]
+  3000 0.0001 0.010
 
 
 ``[Tol]``
 ------------
+The converge tolerance for density-functional calculations. Default is 1e-6
+for energy and 1e-8 for the potential.
 
+.. code-block::
+
+  [Tol]
+  etol vtol
+
+.. list-table::
+   :widths: auto
+   :header-rows: 1
+
+   * - Name
+     - Format
+     - Description
+   * - ``etol``
+     - float
+     - Tolerance for the energy
+   * - ``vtol``
+     - float
+     - Tolerance for the potential
+
+Example:
+.. code-block::
+
+  [Tol]
+  1e-8 1e-10
+  
 
 ``[Configs]``
-------------
+--------------
 
 
 ``[KBDesign]``
-------------
+--------------
 
 
 ``[HFSmooth]``
-------------
+--------------
 
 
 ``[Loginfo]``
-------------
+--------------
 
 
 .. _output:
