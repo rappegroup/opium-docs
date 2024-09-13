@@ -660,7 +660,7 @@ The localized ionic potential is defined as
 
 .. math::
 
-  \hat{V}_{\mathrm{loc}-\mathrm{ion}}^{n l}(r)=\left\{\begin{array}{lr} \gamma_{n l}+\hat{V}_{\mathrm{ion}}^{n l}(r), & r<r_{\mathrm{loc}} \\ e^{-\xi\left(r-r_{\mathrm{loc}}\right)^2}\left[\gamma_{n l}(r)+\hat{V}_{\mathrm{ion}}^{n l}(r)+Z / r-\hat{V}_{\mathrm{H}}\left(\rho_c\right)\right]+\hat{V}_{\mathrm{H}}\left(\rho_c\right)-Z / r, & r \geqslant r_{\mathrm{loc}} \end{array}\right.
+  \hat{V}_{\mathrm{loc}-\mathrm{ion}}^{n l}(r)=\left\{\begin{array}{lr} \gamma_{n l}+\hat{V}_{\mathrm{ion}}^{n l}(r) & r<r_{\mathrm{loc}} \\ e^{-\xi\left(r-r_{\mathrm{loc}}\right)^2}\left[\gamma_{n l}(r)+\hat{V}_{\mathrm{ion}}^{n l}(r)+Z / r-\hat{V}_{\mathrm{H}}\left(\rho_c\right)\right]+\hat{V}_{\mathrm{H}}\left(\rho_c\right)-Z / r & r \geqslant r_{\mathrm{loc}} \end{array}\right.
 
 Where
 
@@ -668,30 +668,31 @@ Where
 
   \gamma_{nl} = p_{nl} +q_{nl} f(r,r_{loc})
 
-The options for dampening functions gives the following choices.
+The options for dampening functions gives the following choices, with 0 being
+no dampening.
 
 1:
 
 .. math::
 
-  f(r,r_{loc}) = \begin{cases} r^4\left(1 - \frac{2r^2}{r^2_{loc}} \right)  & r < r_{loc}>\\ \frac{r_{loc}^4}{3} & r \geq r_{loc} \end{cases}
+  f(r,r_{loc}) = \begin{cases} r^4\left(1 - \frac{2r^2}{r^2_{loc}} \right)  & r < r_{loc}\\ \frac{r_{loc}^4}{3} & r \geq r_{loc} \end{cases}
 
 2: 
 
 .. math::
 
-  f(r,r_{loc}) = \begin{cases} 1 - \frac{2r}{2r_{loc}}  & r < r_{loc}>\\ \frac{r_{loc}}{2} & r \geq r_{loc} \end{cases}
+  f(r,r_{loc}) = \begin{cases} 1 - \frac{r}{2r_{loc}}  & r < r_{loc}\\ \frac{r_{loc}}{2} & r \geq r_{loc} \end{cases}
 
 3:
 
 .. math::
 
-  f(r,r_{loc}) = \begin{cases} r  & r < r_{loc}>\\ r_{loc} & r \geq r_{loc} \end{cases}
+  f(r,r_{loc}) = \begin{cases} r  & r < r_{loc}\\ r_{loc} & r \geq r_{loc} \end{cases}
 
 4:
 
 .. math::
-  f(r,r_{loc}) = \begin{cases} \frac{1}{r} + \frac{r}{r_{loc}^2}  & r < r_{loc}>\\ \frac{2}{r_{loc}} & r \geq r_{loc} \end{cases}
+  f(r,r_{loc}) = \begin{cases} \frac{1}{r} + \frac{r}{r_{loc}^2}  & r < r_{loc}\\ \frac{2}{r_{loc}} & r \geq r_{loc} \end{cases}
 
 Example:
 
@@ -701,11 +702,45 @@ Example:
   1
   1e-6
   0.0 0.0 0.0
-  
+
 
 ``[Loginfo]``
 --------------
+Information for the logarithmic derivatives.
 
+.. code-block::
+
+  [Loginfo]
+  configuration
+  radius min max
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Format
+    - Description
+  * - ``configuration``
+    - integer
+    - Configuration number in ``[Configs]`` for logarithmic derivatives plotting, 0 for ``[Atom]`` reference state.
+  * - ``radius``
+    - float
+    - Radius for logarithmic derivatives.
+  * - ``min``
+    - float
+    - Minimum energy
+  * - ``max``
+    - float
+    - Maximum energy
+  
+Example:
+
+.. code-block::
+
+  [Loginfo]
+  1
+  2.2 -2.0 2.0
 
 .. _output:
 Output File
