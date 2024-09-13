@@ -23,7 +23,7 @@ At present, OPIUM is capable of the following:
 * Constructing Optimized [#]_ (RRKJ), Kerker [#]_, or Troullier-Martins [#]_ pseudopotentials 
 * Partial core correction of Louie, Froyen and Cohen [#]_ and Fuchs and Scheffler [#]_
 * Test and generate and test pseudopotentials that support semicore states
-* Applying augmentation operators designed non-local method of Ramer and Rappe [#]_
+* Augmentation operators for the designed non-local approach of Ramer and Rappe [#]_
 * Ghost state checking following the method suggested by Gonze, Stumpf, and Scheffler [#]_
 * Automatic plotting of wave functions, potentials, and density using xmgrace 
 
