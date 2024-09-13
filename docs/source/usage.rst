@@ -9,7 +9,7 @@ using the following:
 
 .. code-block:: console
 
-   $ ./opium input.param output.txt command1 command2 ...
+  $ ./opium input.param output.txt command1 command2 ...
 
 Where
 
@@ -22,7 +22,7 @@ generate a report, and write the output to a ``.upf`` file for quantum ESPRESSO,
 
 .. code-block:: console
 
-   $ ./opium c.param output.txt ae ps rpt upf
+  $ ./opium c.param output.txt ae ps rpt upf
 
 As of the 1.0.1 release, ``.param`` is implied, so it is not required to be specified.
 
@@ -31,6 +31,7 @@ Interactive execution
 -----------------------
 
 .. note::
+
     Interactive execution is not tested as thoroughly as non-interactive use and 
     should be avoided if possible.
 
@@ -38,14 +39,14 @@ To call OPIUM in interactive mode, do not place any commands after the log file:
 
 .. code-block:: console
 
-   $ ./opium input.param output.txt
+  $ ./opium input.param output.txt
 
 This will create a prompt where commands can be specified dynamically as the program runs:
 
 .. code-block:: console
 
-    $ opium[param=input.param|log=output.txt|verb=0]>> command1 command2
-    $ opium[param=input.param|log=output.txt|verb=0]>> command3
+  $ opium[param=input.param|log=output.txt|verb=0]>> command1 command2
+  $ opium[param=input.param|log=output.txt|verb=0]>> command3
 
 The output will be identical to if the commands were called by the non-interactive mode.
 Interactive mode also has :ref:`some commands <interactive mode commands>` that are not available normally. 
@@ -96,11 +97,11 @@ Output style
    * - ``fhi``
      - Generates ``.fhi`` and ``.cpi`` outputs (for ABINIT and FHI98MD)
    * - ``pwf``
-     - Generate \*.pwf output (for BH)
+     - Generate ``.pwf`` output (for BH)
    * - ``ncpp``
-     - Generate \*.ncpp output (for PWSCF)
+     - Generate ``.ncpp`` output (for PWSCF)
    * - ``recpot``
-     - Generate \*.recpot output (for CASTEP)
+     - Generate ``.recpot`` output (for CASTEP)
 
 
 Plotting
@@ -168,53 +169,231 @@ Parameter File
 OPIUM parameter files are structured using keyblocks that are parsed
 by the `FlexiLib <https://spinor.sourceforge.net/FlexiLib/index.html>`_ library. 
 
+\* indicates a mandatory keyblock.
 
-[Atom]
+
+``[Atom]``\*
+------------
+.. code-block::
+
+  [Atom]
+  symbol
+  orbitals
+  nlm occupation eigenvalue
+  nlm occupation eigenvalue
+  nlm occupation eigenvalue
+  ...
+
+.. list-table::
+   :widths: auto
+   :header-rows: 1
+
+   * - Name
+     - Format
+     - Description
+   * - ``symbol``
+     - 1 or 2 characters
+     - Atomic symbol of the atom
+   * - ``orbitals``
+     - integer
+     - Number of reference orbitals
+   * - ``nlm``
+     - integer
+     - Quantum numbers of the orbital
+   * - ``occupation``
+     - float
+     - Occupation of the orbital 
+   * - ``eigenvalue``
+     - ``-`` or float
+     - Initial eigenvalue guess, ``-`` automatically generates a guess
+
+Example:
+
+.. code-block::
+
+  [Atom]
+  C
+  3
+  100 2.0 -
+  200 2.0 -
+  210 2.3 -0.3
+
+An unbound valence state can be indicated by making the occupation value negative. 
+This invokes the Hamman generalized state method and the occupation is set to 0. 
+You should also specify an eigenvalue guess (can be positive or negative) for 
+the energy of this state. If a ``-`` is in the eigenvalue guess, 
+the energy of this state is set to 0.0 
+
+``[Pseudo]``\*
+------------
+
+.. code-block::
+
+  [Pseudo]
+  orbitals
+  rc
+  rc
+  rc
+  ...
+  method
+
+.. list-table::
+   :widths: auto
+   :header-rows: 1
+
+   * - Name
+     - Format
+     - Description
+   * - ``orbitals``
+     - integer
+     - Number of orbitals in the pseudopotential
+   * - ``rc``
+     - float
+     - Cut of radius for a single pseudo orbital
+   * - ``method``
+     - ``o``, ``k``, or ``t``
+     - Optimized (o), Kerker (k), or Troullier-Martins (t) pseudopotential construction method
+
+.. note::
+
+  The method is determined solely by the first character it reads. For instance,
+  putting ``opt`` will also invoke the optimized pseudopotential method as well.
+
+Example:
+
+.. code-block::
+
+  [Pseudo]
+  3
+  1.5
+  1.6
+  1.6
+  o
+
+
+``[Optinfo]``
+------------
+
+.. note::
+  This keyblock is mandatory if the optimized pseudopotential method is used.
+
+.. code-block::
+
+  [Optinfo]
+  cut-off bessel-functions
+  cut-off bessel-functions
+  cut-off bessel-functions
+  ...
+
+.. list-table::
+   :widths: auto
+   :header-rows: 1
+
+   * - Name
+     - Format
+     - Description
+   * - ``cut-off``
+     - float
+     - Cut-off wavevector qc for an orbital
+   * - ``bessel-functions``
+     - integer
+     - Number of bessel functions for an orbital
+
+Example:
+
+.. code-block::
+
+  [Optinfo]
+  6.00 4
+  7.07 10
+  4.00 5
+
+
+``[XC]``\*
+------------
+.. code-block::
+
+  [XC]
+  functional
+
+.. list-table::
+   :widths: auto
+   :header-rows: 1
+
+   * - Name
+     - Format
+     - Description
+   * - ``functional``
+     - string
+     - Desired exchange-correlation functional
+
+Currently, the following functionals are supported by OPIUM:
+
+.. list-table::
+   :widths: auto
+   :header-rows: 1
+
+   * - String
+     - Functional
+   * - ``lda``
+     - Perdew-Zunger LDA
+   * - ``pwlda``
+     - Perdew-Wang LDA
+   * - ``gga``
+     - Perdew-Burke-Ernzerhof (PBE) GGA
+   * - ``hf``
+     - Hartree-Fock pseudopotential
+   * - ``pbe0``
+     - PBE0 hybrid functional
+   * - ``wpbe0``
+     - wPBE0 range-separated hybrid functional
+
+.. note::
+
+  ``[HFsmooth]`` needs to be used to maintain the coulombic behavior outside the cutoff radius
+  for ``hf``, ``pbe0``, and ``wpbe0``. Relativity is also not yet supported for ``pbe0`` and 
+  ``wpbe0``.
+
+Example:
+
+.. code-block::
+
+  [XC]
+  gga
+
+
+
+``[Pcc]``
 ------------
 
 
-[Pseudo]
+``[Relativity]``
 ------------
 
 
-[Optinfo]
+``[Grid]``
 ------------
 
 
-[XC]
+``[Tol]``
 ------------
 
 
-[PCC]
+``[Configs]``
 ------------
 
 
-[Relativity]
+``[KBDesign]``
 ------------
 
 
-[Grid]
+``[HFSmooth]``
 ------------
 
 
-[Tol]
+``[Loginfo]``
 ------------
 
-
-[Configs]
-------------
-
-
-
-[KBDesign]
-------------
-
-[HFSmooth]
-------------
-
-
-[Loginfo]
-------------
 
 .. _output:
 Output File
