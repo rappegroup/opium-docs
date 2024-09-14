@@ -712,7 +712,7 @@ Information for the logarithmic derivatives.
 
   [Loginfo]
   configuration
-  radius min max
+  radius min-energy max-energy
 
 .. list-table::
   :widths: auto
@@ -723,14 +723,14 @@ Information for the logarithmic derivatives.
     - Description
   * - ``configuration``
     - integer
-    - Configuration number in ``[Configs]`` for logarithmic derivatives plotting, 0 for ``[Atom]`` reference state.
+    - Configuration number in ``[Configs]`` for logarithmic derivatives plotting, 0 for ``[Atom]`` reference state
   * - ``radius``
     - float
-    - Radius for logarithmic derivatives.
-  * - ``min``
+    - Radius for logarithmic derivatives
+  * - ``min-energy``
     - float
     - Minimum energy
-  * - ``max``
+  * - ``max-energy``
     - float
     - Maximum energy
   
@@ -745,8 +745,39 @@ Example:
 .. _output:
 Output File
 ==============================
+The output file is split into the following sections, depending
+on what commands were executed.
+
+Welcome
+----------------
 
 
 
-Log File
+All-Electron (``ae``)
+----------------------
+
+
+Pseudopotential (``ps``)
+--------------------------
+
+
+Non-local (``nl``)
+--------------------------
+
+
+
+Test configurations (``tc``)
+------------------------------
+
+
+
+Report File
 ==============================
+It is convenient to generate a report file using the ``rpt`` command. 
+The report command summarizes key information concerning the pseudopotential. 
+
+
+
+
+
+
