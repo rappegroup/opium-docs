@@ -73,6 +73,7 @@ Using OPIUM involves setting up a parameter file and calling commands.
 This tutorial will illustrate that process with 
 some very simple examples.
 
+.. _hydrogen:
 Hydrogen
 -------------
 The initial parameter file for this this Hydrogen tutorial can be 
