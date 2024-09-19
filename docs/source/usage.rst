@@ -176,7 +176,7 @@ by the `FlexiLib <https://spinor.sourceforge.net/FlexiLib/index.html>`_ library.
 -------------
 Basic information regarding the atom and its orbitals.
 
-.. code-block::
+::
 
   [Atom]
   symbol
@@ -211,7 +211,7 @@ Basic information regarding the atom and its orbitals.
 
 Example:
 
-.. code-block::
+::
 
   [Atom]
   C
@@ -234,7 +234,7 @@ where the cutoff for the pseudopotential construction should be, as well as what
 use when constructing the pseudopotential. The method is determined solely by the first character. 
 For instance, putting ``opt`` will also invoke the optimized pseudopotential method. 
 
-.. code-block::
+::
 
   [Pseudo]
   orbitals
@@ -268,7 +268,7 @@ For instance, putting ``opt`` will also invoke the optimized pseudopotential met
 
 Example:
 
-.. code-block::
+::
 
   [Pseudo]
   3
@@ -283,7 +283,7 @@ Example:
 Additional information needed for the optimized pseudopotential
 construction method. This keyblock is mandatory if the optimized pseudopotential method is used.
 
-.. code-block::
+::
 
   [Optinfo]
   qc bessel-functions
@@ -307,7 +307,7 @@ construction method. This keyblock is mandatory if the optimized pseudopotential
 
 Example:
 
-.. code-block::
+::
 
   [Optinfo]
   6.00 4
@@ -320,7 +320,7 @@ Example:
 The choice of exchange-correlation functional to use in
 the pseudopotential construction.
 
-.. code-block::
+::
 
   [XC]
   functional
@@ -365,7 +365,7 @@ Currently, the following functionals are supported by OPIUM:
 
 Example:
 
-.. code-block::
+::
 
   [XC]
   gga
@@ -377,7 +377,7 @@ Options for applying a partial core correction. The default core radius is 0.0
 (meaning no partial-core) and the default method, and if a radius but no method is specified,
 ``lfc`` is used.
 
-.. code-block::
+::
 
   [Pcc]
   radius
@@ -399,7 +399,7 @@ Options for applying a partial core correction. The default core radius is 0.0
 
 Example:
 
-.. code-block::
+::
 
   [Pcc]
   0.50
@@ -410,7 +410,7 @@ Example:
 -----------------
 Whether relativistic corrections should be applied. Default is no relativistic corrections.
 
-.. code-block::
+::
 
   [Relativity]
   method
@@ -431,7 +431,7 @@ fully-relativistic also adds spin-orbit coupling.
 
 Example:
 
-.. code-block::
+::
 
   [Relativity]
   nrl
@@ -442,7 +442,7 @@ Example:
 The radial grid the calculation should be done on. Defaults parameters are
 ``np`` = 1201, ``a`` = 0.0001, and ``b`` = 0.013. 
 
-.. code-block::
+::
 
   [Grid]
   np a b
@@ -472,7 +472,7 @@ The grid is created by the following formula:
 
 Example:
 
-.. code-block::
+::
 
   [Grid]
   3000 0.0001 0.010
@@ -483,7 +483,7 @@ Example:
 The convergence tolerance for density-functional procedures. Default parameters
 are ``etol`` = 1e-6 and ``vtol`` = 1e-8.
 
-.. code-block::
+::
 
   [Tol]
   etol vtol
@@ -504,7 +504,7 @@ are ``etol`` = 1e-6 and ``vtol`` = 1e-8.
 
 Example:
 
-.. code-block::
+::
 
   [Tol]
   1e-8 1e-10
@@ -516,7 +516,7 @@ Test configurations to see how much the pseudopotential differs from the all-ele
 calculations for a set of given states. The valence orbitals must be in same order as the 
 reference states in the ``[Atom]`` keyblock.
 
-.. code-block::
+::
 
   [Configs]
   configurations
@@ -555,7 +555,7 @@ reference states in the ``[Atom]`` keyblock.
 
 Example:
 
-.. code-block::
+::
 
   [Configs]
   3
@@ -577,7 +577,7 @@ Example:
 Parameters for the designed non-local pseudopotential approach of Ramer and Rappe. Default
 is no optimization functions.
 
-.. code-block::
+::
 
   [KBdesign]
   local-orbital
@@ -615,7 +615,7 @@ is no optimization functions.
 
 Example:
 
-.. code-block::
+::
 
   [KBdesign]
   s
@@ -633,7 +633,7 @@ radii are set to 0.0, the cutoff radii from ``[Pseudo]`` will be used.
 
 Default is not dampening and 1e-6 for optimization tolerance. 
 
-.. code-block::
+::
 
   [HFSmooth]
   option
@@ -696,7 +696,7 @@ no dampening.
 
 Example:
 
-.. code-block::
+::
 
   [HFSmooth]
   1
@@ -708,7 +708,7 @@ Example:
 --------------
 Information for the logarithmic derivatives.
 
-.. code-block::
+::
 
   [Loginfo]
   configuration
@@ -736,7 +736,7 @@ Information for the logarithmic derivatives.
   
 Example:
 
-.. code-block::
+::
 
   [Loginfo]
   1
@@ -756,7 +756,7 @@ Below is an example of a welcome message in OPIUM 4.1.  When running non-interac
 this section is at the beginning of every log file. In interactive mode this section 
 is written after every carriage return. 
 
-.. code-block::
+::
 
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
           OPIUM  Version:        4.1                             
@@ -809,7 +809,7 @@ the largest change in the eigenvalues and the potential is printed. Then the fil
 summary of the eigenvalues and partial norm of each wavefunction, which is the integral from the cutoff 
 radius to infinity. The partial norm is only calculated for valence states. 
 
-.. code-block::
+::
 
   ======================================================================== 
   Begin AE calculation
@@ -880,7 +880,7 @@ the convergence term multiplied by the occupation number.
   Even if you obtain excellent transferability for your pseudoptential, you still must 
   have a small convergence error at this qc for your results to be correct.
 
-.. code-block::
+::
 
   ======================================================================== 
   Begin PS construction
@@ -942,7 +942,7 @@ to ensure that the pseudopotential yields the correct eigenvalue for the referen
 The final section of the ``ps`` calculation is a loop over all valence states to check
 for the existence of ghost states. 
 
-.. code-block::
+::
 
   ------------------------------
   Descreening potential
@@ -976,7 +976,7 @@ potential is just chosen from the valence. If the designed
 non-local method is used (some function(s) added to a valence potential) 
 this can change the ghost behavior.
 
-.. code-block::
+::
 
   ======================================================================== 
   Begin NL calculation
@@ -1020,7 +1020,7 @@ environments other than the reference configuration
 (the configuration used in the generation step). The all-electron and pseudo-eigenvalues and
 partial norms are computed for each test configuration (from the ``[Configs]`` keyblock).
 
-.. code-block::
+::
 
   ======================================================================== 
   Begin TC calculation
