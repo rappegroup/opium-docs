@@ -881,7 +881,7 @@ the convergence term multiplied by the occupation number.
   have a small convergence error at this qc for your results to be correct.
 
 .. code-block::
-  
+
   ======================================================================== 
   Begin PS construction
   ======================================================================== 
@@ -1304,7 +1304,7 @@ The report command summarizes key information concerning the pseudopotential.
 
 The first part of the report file is a dump of the parameter file.
 
-.. code-block::
+::
 
   ##########################################################
   #    Opium Report File                                   #
@@ -1338,7 +1338,7 @@ The first part of the report file is a dump of the parameter file.
 
 Next, the all-electron output is summarized.
 
-.. code-block::
+::
 
   ### AE report ########################################
 
@@ -1356,7 +1356,7 @@ the convergence error in the reference state and is reported in mRy as well as m
 The last column states whether a ghost was found when this state was used as the local potential. 
 If the ghost testing was inconclusive, a ``?`` will be printed. 
 
-.. code-block::
+::
 
   ### PS report ########################################
 
@@ -1373,7 +1373,7 @@ If the ghost testing was inconclusive, a ``?`` will be printed.
  Next, the NL test results are summarized. The ghost testing column in this table 
  shows whether one of the non-local potentials gives a ghost given the choice of local potential. 
 
-.. code-block::
+::
 
   ### NL/SL report #####################################
 
@@ -1393,7 +1393,7 @@ The last section is the comparison of the change in energy between configuration
 (configuration "0" is the reference) for the AE and NL atoms. 
 This is another quantity that can be used to measure transferability. 
 
-.. code-block::
+::
 
   ### TC report ########################################
 
