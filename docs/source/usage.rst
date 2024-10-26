@@ -256,7 +256,7 @@ For instance, putting ``opt`` will also invoke the optimized pseudopotential met
     - Number of orbitals in the pseudopotential
   * - ``rc``
     - float
-    - Cut of radius for a single pseudo orbital
+    - Cutoff radius for a single pseudo orbital
   * - ``method``
     - ``o``, ``k``, or ``t``
     - Optimized (``o``), Kerker (``k``), or Troullier-Martins (``t``) pseudopotential construction method
@@ -426,8 +426,7 @@ Whether relativistic corrections should be applied. Default is no relativistic c
     - ``nrl``, ``srl``, or ``frl``
     - Non-relativistic (``nrl``), Scalar-relativistic (``srl``), or fully-relativistic (``frl``)
 
-Scalar-relativistic implements the mass-velocity correction, Darwin correction, and spin-spin interaction.
-fully-relativistic also adds spin-orbit coupling.
+Fully-relativistic calculations also include spin-orbit coupling.
 
 Example:
 
